@@ -29,14 +29,17 @@ A machine learning project that predicts diabetes risk using clinical features f
    cd diabetes-risk-predictor
 
 2. Install the required dependencies
-
+   ```bash
    pip install -r requirements.txt
 
-3. Run the exploratory analysis and model training
+3. Run the exploratory analysis and model training.
    Open the notebook in the notebooks/ directory:
+   ```bash
    EDA_and_Preprocessing.ipynb
+
    Execute the cells sequentially.
 
-4. Run inference using the trained model
+4. Run inference using the trained model.
    Use the prediction pipeline in:
+   ```bash
    src/predict.py
