@@ -37,7 +37,7 @@ A machine learning project that predicts diabetes risk using clinical features f
    ```bash
    EDA_and_Preprocessing.ipynb
 
-   Execute the cells sequentially.
+Execute the cells sequentially.
 
 4. Run inference using the trained model.
    Use the prediction pipeline in:
