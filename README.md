@@ -23,19 +23,20 @@ A machine learning project that predicts diabetes risk using clinical features f
         └── models/
 ## How to Run the Project
 
-1. //Clone the repository
+1. Clone the repository
    ```bash
    git clone https://github.com/your-username/diabetes-risk-predictor.git
    cd diabetes-risk-predictor
 
-2. //Install the required dependencies
+2. Install the required dependencies
+
    pip install -r requirements.txt
 
-3. //Run the exploratory analysis and model training
-   //Open the notebook in the notebooks/ directory:
+3. Run the exploratory analysis and model training
+   Open the notebook in the notebooks/ directory:
    EDA_and_Preprocessing.ipynb
-   //Execute the cells sequentially.
+   Execute the cells sequentially.
 
-4. //Run inference using the trained model
-   //Use the prediction pipeline in:
+4. Run inference using the trained model
+   Use the prediction pipeline in:
    src/predict.py
