@@ -53,8 +53,8 @@ A machine learning project that predicts diabetes risk using clinical features f
    notebooks/EDA_and_Preprocessing.ipynb
    
 
-   Execute the cells sequentially to perform EDA and model training.
-   Save the trained model and scaler to the models/ directory
+Execute the cells sequentially to perform EDA and model training.
+Save the trained model and scaler to the models/ directory
 
    
 
@@ -63,6 +63,5 @@ A machine learning project that predicts diabetes risk using clinical features f
    uvicorn api.main:app --reload
 
 
-   Open the browser and navigate to:
-
-   http://127.0.0.1:8000/docs
+Open the browser and navigate to:
+http://127.0.0.1:8000/docs
