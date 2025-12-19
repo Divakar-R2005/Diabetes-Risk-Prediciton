@@ -1,13 +1,12 @@
-import joblib
-import pandas as pd
 from pathlib import Path
+import joblib
+import numpy as np
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-MODEL_PATH = BASE_DIR / "models" / "diabetes_rf_model.pkl"
 
-model = joblib.load(MODEL_PATH)
+model = joblib.load(BASE_DIR / "models" / "diabetes_rf_model.pkl")
 
-FEATURE_NAMES = [
+FEATURE_ORDER = [
     'Pregnancies',
     'Glucose',
     'BloodPressure',
@@ -18,12 +17,11 @@ FEATURE_NAMES = [
     'Age'
 ]
 
-def predict_diabetes(features):
-    df_input = pd.DataFrame([features], columns=FEATURE_NAMES)
-    prediction = model.predict(df_input)
-    probability = model.predict_proba(df_input)[0][1]
+def predict_diabetes(input_dict):
+    X = np.array(
+        [input_dict[col] for col in FEATURE_ORDER],
+        dtype=float
+    ).reshape(1, -1)
 
-    return {
-        "prediction": int(prediction[0]),
-        "probability": round(float(probability), 2)
-    }
+    probability = model.predict_proba(X)[0][1]
+    return probability
