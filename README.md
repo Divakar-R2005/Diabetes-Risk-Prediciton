@@ -21,10 +21,10 @@ An end-to-end machine learning system that predicts the risk of diabetes using c
         ├── notebooks/
         ├── src/
         ├── data/
-        └── models/   ###Created at runtime (not committed)
+        └── models/   ### Created at runtime (not committed)
 
 
-##Live Deployment
+## Live Deployment
 
 Base URL:
    ```bash
@@ -72,7 +72,7 @@ Swagger UI (API Docs):
    ```bash
    http://127.0.0.1:8000/docs
    ```
-##Notes
+## Notes
 -The Random Forest model is used without feature scaling, as tree-based models are invariant to feature magnitude.
 -A probability threshold of 0.3 is used to classify high-risk cases.
 -Logistic Regression was used only during experimentation for baseline comparison and is not part of the production pipeline.
