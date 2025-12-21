@@ -73,7 +73,7 @@ Swagger UI (API Docs):
    http://127.0.0.1:8000/docs
    ```
 ## Notes
--The Random Forest model is used without feature scaling, as tree-based models are invariant to feature magnitude.
--A probability threshold of 0.3 is used to classify high-risk cases.
--Logistic Regression was used only during experimentation for baseline comparison and is not part of the production pipeline.
--Probability values are approximate due to the ensemble-based nature of Random Forest models.
+- The Random Forest model is used without feature scaling, as tree-based models are invariant to feature magnitude.
+- A probability threshold of 0.3 is used to classify high-risk cases.
+- Logistic Regression was used only during experimentation for baseline comparison and is not part of the production pipeline.
+- Probability values are approximate due to the ensemble-based nature of Random Forest models.
