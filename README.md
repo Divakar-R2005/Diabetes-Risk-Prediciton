@@ -1,6 +1,6 @@
 # Diabetes Risk Prediction System
 
-A machine learning project that predicts diabetes risk using clinical features from the PIMA Indians Diabetes dataset.The project includes exploratory data analysis, model training, and a FastAPI backend for real-time inference.
+An end-to-end machine learning system that predicts the risk of diabetes using clinical features from the PIMA Indians Diabetes dataset. The project covers data exploration, model training, and deployment as a production-ready REST API using FastAPI and Render.
 
 ## Features
 - Exploratory Data Analysis (EDA)
@@ -21,13 +21,20 @@ A machine learning project that predicts diabetes risk using clinical features f
         ├── notebooks/
         ├── src/
         ├── data/
-        └── models/
+        └── models/   ###Created at runtime (not committed)
 
-## Notes
-- The API uses a probability threshold of 0.3 to classify high-risk cases.
-- Probability outputs are approximate due to ensemble-based prediction.
 
-## How to Run the Project
+##Live Deployment
+
+Base URL:
+   ```bash
+   https://diabetes-risk-predictor-gzmz.onrender.com
+   ```
+Swagger UI (API Docs):
+   ```bash
+   https://diabetes-risk-predictor-gzmz.onrender.com/docs
+   ```
+## How to Run the Project Locally
 
 1. Clone the repository
    ```bash
@@ -38,7 +45,7 @@ A machine learning project that predicts diabetes risk using clinical features f
 2. Create and activate a virtual environment
    ```bash
    python -m venv venv
-   venv\Scripts\activate
+   venv\Scripts\activate ###windows
 
 
 3. Install the required dependencies
@@ -46,22 +53,27 @@ A machine learning project that predicts diabetes risk using clinical features f
    pip install -r requirements.txt
 
 
-4. Run exploratory data analysis and train the model
-
-   Open the notebook in the notebooks/ directory:
+4. Train the model
    ```bash
-   notebooks/EDA_and_Preprocessing.ipynb
-   
+   python notebooks/train_model.py
+   ```
 
-Execute the cells sequentially to perform EDA and model training.
-Save the trained model and scaler to the models/ directory
+   Execute the cells sequentially to perform EDA and model training.
+   Save the trained model and scaler to the models/ directory
 
    
 
 5. Run the FastAPI application
    ```bash
    uvicorn api.main:app --reload
+   ```
 
-
-Open the browser and navigate to:
-http://127.0.0.1:8000/docs
+6. Open the browser and navigate to:
+   ```bash
+   http://127.0.0.1:8000/docs
+   ```
+##Notes
+-The Random Forest model is used without feature scaling, as tree-based models are invariant to feature magnitude.
+-A probability threshold of 0.3 is used to classify high-risk cases.
+-Logistic Regression was used only during experimentation for baseline comparison and is not part of the production pipeline.
+-Probability values are approximate due to the ensemble-based nature of Random Forest models.
