@@ -38,8 +38,8 @@ Swagger UI (API Docs):
 
 1. Clone the repository
    ```bash
-   git clone https://github.com/your-username/diabetes-risk-predictor.git
-   cd diabetes-risk-predictor
+   git clone https://github.com/Divakar-R2005/Diabetes-Risk-Prediction.git
+   cd diabetes-predictor
 
 
 2. Create and activate a virtual environment
