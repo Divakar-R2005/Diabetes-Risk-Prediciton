@@ -28,12 +28,27 @@ An end-to-end machine learning system that predicts the risk of diabetes using c
 
 Base URL:
    ```bash
-   https://diabetes-risk-predictor-gzmz.onrender.com
+   https://diabetes-risk-prediction-mrfx.onrender.com
    ```
 Swagger UI (API Docs):
    ```bash
-   https://diabetes-risk-predictor-gzmz.onrender.com/docs
+   https://diabetes-risk-prediction-mrfx.onrender.com/docs
    ```
+
+## Try sample value of high risk patient
+   ```bash
+   {
+   "Pregnancies": 5,
+   "Glucose": 180,
+   "BloodPressure": 90,
+   "SkinThickness": 35,
+   "Insulin": 200,
+   "BMI": 36.5,
+   "DiabetesPedigreeFunction": 1.2,
+   "Age": 55
+   }
+   ```
+
 ## How to Run the Project Locally
 
 1. Clone the repository
